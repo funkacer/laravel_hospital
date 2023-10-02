@@ -108,6 +108,7 @@
                         <li>Second</li>
                         <!--<li><a href="kontakty">Kontakty</a></li>-->
                         <li><a href="{{ route('contactRoute') }}">Kontakty</a></li>
+                        <li><a href="{{ route('patientsRoute') }}">Pacienti</a></li>
                     </ul>
                 </div>
 

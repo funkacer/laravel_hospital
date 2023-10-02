@@ -26,3 +26,9 @@ Route::get('/', function () {
 Route::get('/kontakty', function () {
     return view('contact');
 })->name('contactRoute');
+
+Route::get('/pacienti', function () {
+    $data = DB::table('patient')->get();
+    //dd($data);
+    return view('patients', ['patients' => $data]);
+})->name('patientsRoute');

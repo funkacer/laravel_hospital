@@ -17,7 +17,7 @@
 
                 <ul>
                     @foreach ($patients as $patient)
-                        <li>{{$patient->firstname}} {{$patient->surname}}</li>
+                        <li>{{$patient->firstname}} {{$patient->surname}}, {{$patient->age}} let</li>
                     @endforeach
                 </ul>
 

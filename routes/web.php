@@ -28,7 +28,13 @@ Route::get('/kontakty', function () {
 })->name('contactRoute');
 
 Route::get('/pacienti', function () {
-    $data = DB::table('patient')->get();
+    $data = DB::table('patient')->where('age', '>', 30)->get();
     //dd($data);
     return view('patients', ['patients' => $data]);
+})->name('patientsRoute');
+
+Route::get('/pacient/{id}', function ($id) {
+    $data = DB::table('patient')->find($id);
+    //dd($data);
+    return view('patients', ['patient' => $data]);
 })->name('patientsRoute');

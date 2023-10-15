@@ -18,7 +18,8 @@
                 <ul>
                     @foreach ($patients as $patient)
                         <!--<li><a href="pacient/{{$patient->id}}">{{$patient->firstname}} {{$patient->surname}}</a></li>-->
-                        <li><a href="{{ route('patientRoute', $patient->id) }}">{{$patient->firstname}} {{$patient->surname}}</a></li>
+                        <!--<li><a href="{{ route('patientRoute', $patient->id) }}">{{$patient->firstname}} {{$patient->surname}}</a></li>-->
+                        <li><a href="{{ route('patientRoute', ['id' => $patient->id]) }}">{{$patient->firstname}} {{$patient->surname}}</a></li>
                     @endforeach
                 </ul>
 

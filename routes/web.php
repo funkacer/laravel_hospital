@@ -36,5 +36,8 @@ Route::get('/pacienti', function () {
 Route::get('/pacient/{id}', function ($id) {
     $data = DB::table('patient')->find($id);
     //dd($data);
+    if(!isset($data)) {
+        return abort(404);
+    }
     return view('patientDetail', ['patient' => $data]);
 })->name('patientRoute');

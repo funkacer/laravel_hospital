@@ -1,10 +1,11 @@
-@extends('layouts.layout')
-
-@section('pageTitle')
-    Pacient - detail
-@endsection
-
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail pacienta</title>
+</head>
+<body>
     <h1>Detaily</h1>
     <p>Jméno: {{$patient->firstname}}</p>
     <p>Příjmení: {{$patient->surname}}</p>
@@ -19,4 +20,5 @@
         @endif
     </p>
     <p>Detail: {{$patient->detail}}</p>
-@endsection
+</body>
+</html>
